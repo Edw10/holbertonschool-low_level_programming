@@ -1,6 +1,7 @@
 #include <stdio.h>
-/*
- * code to put a message
+/**
+ * main - code to put a message
+ * Return: Always 0
  */
 int main(void)
 {
