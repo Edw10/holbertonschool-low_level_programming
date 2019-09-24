@@ -16,10 +16,10 @@ int print_sign(int n)
 	}
 	else if (n > 0)
 	{
-		_print('+')
+		_print('+');
 		return (1);
 	}
-	_print('0')
+	_print('0');
 	return (0);
 
 }
