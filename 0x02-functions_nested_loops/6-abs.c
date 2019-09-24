@@ -3,7 +3,7 @@
 /**
  * _abs - print the sign of a number
  * @n: the number to test
- *_putchar write on screen
+ * _putchar write on screen
  * Return: the absolute valor of a number
  */
 
@@ -17,4 +17,5 @@ int _abs(int n)
 	{
 		return (n);
 	}
+	return (0);
 }
