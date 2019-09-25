@@ -25,22 +25,26 @@ void print_times_table(int n)
 				}
 				if ((h * j) >= 100)
 				{
+					_putchar(' ');
 					_putchar((h * j) / 100 + '0');
-					_putchar((h * j) / 10 + '0');
+					_putchar(((h * j) % 100) / 10 + '0');
 					_putchar((h * j) % 10 + '0');
 				}
 				else if ((h * j) >= 10)
 				{
 					_putchar(' ');
-					_putchar((h * j) / 10 + '0');
+					_putchar(' ');
+					_putchar(((h * j) % 100) / 10 + '0');
 					_putchar((h * j) % 10 + '0');
 				}
 				else
 				{
 					_putchar(' ');
 					_putchar(' ');
+					_putchar(' ');
 					_putchar((h * j) + '0');
 				}
+				_putchar(',');
 			}
 			_putchar('\n');
 		}
