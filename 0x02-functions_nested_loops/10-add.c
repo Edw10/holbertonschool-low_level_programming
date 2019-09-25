@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _islower - determine if lowercase or uppercase
+ * add - add two numbers
  * @c: the firts number
  * @a: another number
  *_putchar write on screen
@@ -11,5 +11,4 @@
 int add(int c, int a)
 {
 	return (c + a);
-
 }
