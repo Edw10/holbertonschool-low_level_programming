@@ -23,6 +23,10 @@ void print_times_table(int n)
 					_putchar('0' + (j * h));
 					_putchar(',');
 				}
+				else
+				{
+					_putchar(',');
+				}
 				if ((h * j) >= 100)
 				{
 					_putchar(' ');
@@ -44,7 +48,6 @@ void print_times_table(int n)
 					_putchar(' ');
 					_putchar((h * j) + '0');
 				}
-				_putchar(',');
 			}
 			_putchar('\n');
 		}
