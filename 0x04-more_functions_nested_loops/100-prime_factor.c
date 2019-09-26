@@ -13,17 +13,18 @@ int main(void)
 
 	for (i = 612852475142; i >= 2; i--)
 	{
-		for (j = i - 1; j >= 2; j--)
+		for j = (i - 1) ; j >= 2; j--)
 		{
 			if (i % j == 0)
 			{
-				break;
+				printf("%ld\n", i);
+				j = 1;
+				break ();
 			}
 		}
 		if (j <= 2)
 		{
-			printf("%ld\n", i);
-			break;
+			break ();
 		}
 	}
 	return (0);
