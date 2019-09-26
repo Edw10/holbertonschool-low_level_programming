@@ -9,33 +9,18 @@
 int main(void)
 {
 	long i;
-	long j = 2;
-	int a;
+	long j = 612852475143;
 
-	for (i = 612852475142; i >= 2; i--)
+	for (i = 2; i < j; i++)
 	{
-		if (612852475143 % i == 0)
+		if (j % i == 0)
 		{
-			/* printf("%ld \n", i);*/
-			a = 0;
-			for (j = 2 ; j < i; j++)
-			{
-				/* printf("%ld %ld \n", j, i); */
-
-				if (i % j == 0)
-				{
-					/* printf("%ld %ld \n", j, i); */
-					a = 1;
-					break;
-				}
-			}
-
-			if (a == 0)
-			{
-				printf("%ld\n", i);
-				break;
-			}
+			j = j / i;
+			i = 1;
 		}
 	}
+	printf("%ld\n", j);
+
+
 	return (0);
 }
