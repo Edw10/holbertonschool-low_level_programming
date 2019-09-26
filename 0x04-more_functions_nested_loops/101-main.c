@@ -7,16 +7,16 @@
  */
 int main(void)
 {
-	print_number(98);
+	int i;
+
+	print_number(2147483647);
 	_putchar('\n');
-	print_number(402);
+	print_number('a');
 	_putchar('\n');
-	print_number(1024);
-	_putchar('\n');
-	print_number(0);
-	_putchar('\n');
-	print_number(-98);
-	_putchar('\n');
-	print_number(100254);
+	for(i = -4000; i <= 4100; i = i + 300)
+	{
+		print_number(i);
+		_putchar('\n');
+	}
 	return (0);
 }

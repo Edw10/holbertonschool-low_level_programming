@@ -12,12 +12,15 @@ void print_number(int n)
 	int j = 1;
 	int d = 10;
 	int i;
+	int a;
 
 	if (n < 0)
 	{
 		_putchar('-');
 		n = n * -1;
 	}
+	a = n % 10;
+	n = n / 10;
 	while (n / (j * 10) > 0)
 	{
 		j = j * 10;
@@ -28,5 +31,5 @@ void print_number(int n)
 		n = n - (d * i);
 		_putchar('0' + d);
 	}
-
+	_putchar('0' + a);
 }
