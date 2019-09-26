@@ -2,12 +2,11 @@
 
 /**
  * times_table - prints every minute
- *@n: number of the table
  * _putchar write on screen
  * Return: void
  */
 
-void times_table(int n)
+void times_table(void)
 {
 	int j;
 	int h;
