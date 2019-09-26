@@ -3,6 +3,7 @@
 
 /**
  * print_to_98 - prints every minute
+ * @n: number to start
  * _putchar write on screen
  * Return: void
  */
