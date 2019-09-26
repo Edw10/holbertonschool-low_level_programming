@@ -11,9 +11,9 @@ int main(void)
 	long i;
 	long j = 2;
 
-	for (i = 1231951; i >= 2; i--)
+	for (i = 612852475142; i >= 2; i--)
 	{
-		if (1231952 % i == 0)
+		if (612852475143 % i == 0)
 		{
 			/* printf("%ld \n", i);*/
 			for (j = 2 ; j < i; j++)
