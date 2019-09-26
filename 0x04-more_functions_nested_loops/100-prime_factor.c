@@ -19,12 +19,12 @@ int main(void)
 			{
 				printf("%ld\n", i);
 				j = 1;
-				break();
+				break;
 			}
 		}
 		if (j <= 2)
 		{
-			break();
+			break;
 		}
 	}
 	return (0);
