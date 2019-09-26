@@ -20,7 +20,7 @@ int main(void)
 			sum = sum + (3 * n) + (5 * n);
 		n++;
 	}
-	printf("%d\n", sum);
+	printf("%d", sum);
 
 	return (0);
 }
