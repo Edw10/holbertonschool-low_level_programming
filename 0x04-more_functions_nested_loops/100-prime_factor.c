@@ -13,18 +13,14 @@ int main(void)
 
 	for (i = 612852475142; i >= 2; i--)
 	{
-		for (j = (i - 1); j >= 2; j--)
+		for (j = 2 ; j < i; j++)
 		{
 			if (i % j == 0)
 			{
 				break;
 			}
-			else if ((i % j != 0) && j == 2)
-			{
-				j = 1;
-			}
 		}
-		if (j <= 2)
+		if (j >= i)
 		{
 			printf("%ld\n", i);
 			break;
