@@ -17,13 +17,16 @@ int main(void)
 		{
 			if (i % j == 0)
 			{
-				printf("%ld\n", i);
-				j = 1;
 				break;
+			}
+			else if ((i % j != 0) && j == 2)
+			{
+				j = 1;
 			}
 		}
 		if (j <= 2)
 		{
+			printf("%ld\n", i);
 			break;
 		}
 	}
