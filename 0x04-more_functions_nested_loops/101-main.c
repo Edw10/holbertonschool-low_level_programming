@@ -13,7 +13,7 @@ int main(void)
 	_putchar('\n');
 	print_number(0);
 	_putchar('\n');
-	for(i = -4000; i <= 4100; i = i + 300)
+	for(i = -100; i <= 100; i = i + 5)
 	{
 		print_number(i);
 		_putchar('\n');

@@ -12,14 +12,14 @@ void print_number(int n)
 	int j = 1;
 	int d = 10;
 	int i;
-	int a=0;
+	int a = 0;
 
 	if (n < 0)
 	{
 		_putchar('-');
 		n = n * -1;
 	}
-	if (n <= 10)
+	if (n < 10)
 	{
 		a = n % 10;
 		_putchar('0' + a);
