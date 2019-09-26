@@ -11,7 +11,7 @@ int main(void)
 
 	print_number(2147483647);
 	_putchar('\n');
-	print_number('a');
+	print_number(0);
 	_putchar('\n');
 	for(i = -4000; i <= 4100; i = i + 300)
 	{
