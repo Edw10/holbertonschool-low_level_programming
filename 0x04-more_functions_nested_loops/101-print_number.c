@@ -9,10 +9,10 @@
 
 void print_number(int n)
 {
-	int j = 1;
-	int d = 10;
-	int i;
-	int a = 0;
+	unsigned int j = 1;
+	unsigned int d = 10;
+	unsigned int i;
+	unsigned int a = 0;
 
 	if (n < 0)
 	{
