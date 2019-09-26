@@ -20,7 +20,7 @@ int main(void)
 				break;
 			}
 		}
-		if (j == 1)
+		if (j <= 2)
 		{
 			printf("%ld\n", i);
 			break;
