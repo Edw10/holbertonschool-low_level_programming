@@ -12,15 +12,19 @@ int main(void)
 	int n = 1;
 	int sum;
 
-	while (((3 * n) < 1024) || ((5 * n) < 1024))
+	while ((5 * n) < 1024)
 	{
-		if ((n * 5) % 3 == 0)
-			sum = sum + (3 * n);
-		else
-			sum = sum + (3 * n) + (5 * n);
+		if ((n * 5) % 3 != 0)
+			sum = sum + (5 * n);
 		n++;
 	}
-	printf("%d", sum);
+	n = 1;
+	while ((3 * n) < 1024)
+	{
+		sum = sum + (3 * n);
+		n++;
+	}
+	printf("%d\n", sum);
 
 	return (0);
 }
