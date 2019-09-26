@@ -1,12 +1,13 @@
 #include <stdio.h>
+#include "holberton.h"
 
 /**
  * main - print the sum of the mutiples below 1024
  *
- * Return: void
+ * Return: 0
  */
 
-void main(void)
+int main(void)
 {
 	int n = 1;
 	int sum;
@@ -20,4 +21,6 @@ void main(void)
 		n++;
 	}
 	printf("%d\n", sum);
+
+	return (0);
 }
