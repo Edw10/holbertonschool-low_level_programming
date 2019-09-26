@@ -28,5 +28,5 @@ void print_number(int n)
 		n = n - (d * i);
 		_putchar('0' + d);
 	}
-	_putchar('\n');
+
 }
