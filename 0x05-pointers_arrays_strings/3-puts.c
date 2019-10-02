@@ -1,7 +1,6 @@
 #include "holberton.h"
 
 /**
- *
  * _puts - print a string in screen
  * @str: string to print
  *
