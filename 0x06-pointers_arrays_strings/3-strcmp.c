@@ -21,12 +21,5 @@ int _strcmp(char *s1, char *s2)
 	i = i + *(s1 + c);
 	j = j + *(s2 + c);
 
-	/* c = 0; */
-
-	/* while (*(s2 + c) != '\0') */
-	/* { */
-	/* 	c++; */
-	/* } */
-
 	return (i - j);
 }
