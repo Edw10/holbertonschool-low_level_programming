@@ -12,19 +12,21 @@ int _strcmp(char *s1, char *s2)
 	int c = 0;
 	int i = 0, j = 0;
 
-	while (*(s1 + c) != '\0')
+	while (*(s1 + c) == *(s2 + c) && *(s2 + c) != '\0' && *(s1 + c) != '\0')
 	{
 		i = i + *(s1 + c);
-		c++;
-	}
-
-	c = 0;
-
-	while (*(s2 + c) != '\0')
-	{
 		j = j + *(s2 + c);
 		c++;
 	}
+	i = i + *(s1 + c);
+	j = j + *(s2 + c);
+
+	/* c = 0; */
+
+	/* while (*(s2 + c) != '\0') */
+	/* { */
+	/* 	c++; */
+	/* } */
 
 	return (i - j);
 }
