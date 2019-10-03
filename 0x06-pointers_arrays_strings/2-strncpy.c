@@ -18,11 +18,12 @@ char *_strncpy(char *dest, char *src, int n)
 	while (*(src + c) != '\0' && c < n)
 	{
 		*(dest + c) = *(src + c);
-		if (*(dest + c) == '\n' && *(src + c + 1) == '\0')
-			for (i = c + 1; i < n; i++)
-				*(dest + i) = '\0';
 		c++;
 	}
-
+	if (*(dest + c - 1) == '\n' || c < n)
+	{
+		for (i = c; i < n; i++)
+			*(dest + i) = '\0';
+	}
 	return (dest);
 }
