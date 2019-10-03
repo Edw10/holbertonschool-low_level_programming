@@ -14,8 +14,9 @@ char *_strncpy(char *dest, char *src, int n)
 	while (*(src + c) != '\0' && c < n)
 	{
 		*(dest + c) = *(src + c);
+		if (*(dest + c) == '\n')
+			*(dest + c + 1) = '\0';
 		c++;
 	}
-	*(dest + c) = '\0';
 	return (dest);
 }
