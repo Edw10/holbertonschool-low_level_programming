@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _strlem_recursion - prints a string in reverse
+ * _strlen_recursion - prints a string in reverse
  * @s: string to print
  *
  */
