@@ -15,8 +15,10 @@ char *create_array(unsigned int size, char c)
 		unsigned int i;
 
 		for (i = 0; i < size; i++)
-			p[i] = c;
-
+		{
+			if (c != '\0')
+				p[i] = c;
+		}
 		return (p);
 	}
 	else
