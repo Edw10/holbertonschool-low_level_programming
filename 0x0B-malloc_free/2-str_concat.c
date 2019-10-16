@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * str_concat - concat two strings
@@ -12,8 +13,6 @@ char *str_concat(char *s1, char *s2)
 	char *p;
 	int i = 0, j = 0, h = 0;
 
-	if (s1 && s2)
-	{
 		while (s1[i])
 		{
 			i++;
@@ -41,10 +40,5 @@ char *str_concat(char *s1, char *s2)
 			return ('\0');
 		}
 		return (p);
-	}
-	else
-	{
-		return ('\0');
-	}
 
 }
