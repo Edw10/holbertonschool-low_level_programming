@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * calloc - reserve a block of memory initialiced in 0
- * @nmemb: number of elements
- * @size: size of elements;
+ * array_range - reserve a block of memory initialiced in 0
+ * @min: initial number
+ * @max: final number
  */
 
 int *array_range(int min, int max)

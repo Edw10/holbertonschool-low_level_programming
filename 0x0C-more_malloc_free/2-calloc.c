@@ -3,9 +3,10 @@
 #include <stdio.h>
 
 /**
- * calloc - reserve a block of memory initialiced in 0
+ * _calloc - reserve a block of memory initialiced in 0
  * @nmemb: number of elements
  * @size: size of elements;
+ * Return: a pointer to the element
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)

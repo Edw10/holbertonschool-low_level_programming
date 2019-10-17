@@ -2,9 +2,10 @@
 #include <stdio.h>
 
 /**
- * str_concat - concat two strings
+ * string_nconcat - concat two strings
  * @s1: string to copy
  * @s2: string to concat
+ * @n: number of bytes
  * Return: a pointer to the string
  */
 
@@ -18,37 +19,33 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-		while (s1[i])
+	while (s1[i])
+	{
+		i++;
+	}
+	while (s2[j])
+	{
+		j++;
+	}
+	p = malloc(sizeof(char) * (i + n + 1));
+	if (p)
+	{
+		while (h < i)
 		{
-			i++;
+			p[h] = s1[h];
+			h++;
 		}
-		while (s2[j])
+		h = 0;
+		while (h < j && h < n)
 		{
-			j++;
+			p[i + h] = s2[h];
+			h++;
 		}
-
-		p = malloc(sizeof(char) * (i + n + 1));
-
-		if (p)
-		{
-
-			while (h < i)
-			{
-				p[h] = s1[h];
-				h++;
-			}
-			h = 0;
-			while (h < j && h < n)
-			{
-				p[i + h] = s2[h];
-				h++;
-			}
-			p[i + h] = '\0';
-		}
-		else
-		{
-			return ('\0');
-		}
-		return (p);
-
+		p[i + h] = '\0';
+	}
+	else
+	{
+		return ('\0');
+	}
+	return (p);
 }
