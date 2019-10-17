@@ -3,7 +3,11 @@
 #include <stdio.h>
 
 /**
- *
+ * _realloc - reallocate a block of memory
+ * @ptr: pointer to space
+ * @old_size: old size of the space
+ * @new_size: new size of space
+ * Return: a pointer to the new space
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
@@ -15,10 +19,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		{
 			return (NULL);
 		}
-		pt = malloc(new_size);
-		if (pt)
+		p = malloc(new_size);
+		if (p)
 		{
-			return (pt);
+			return (p);
 		}
 	}
 	if (new_size == 0 && ptr)
@@ -43,7 +47,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		return (NULL);
 	}
+
 	free(ptr);
-	
 	return (p);
 }
