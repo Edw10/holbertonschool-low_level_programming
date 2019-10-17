@@ -43,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 				p[i + h] = s2[h];
 				h++;
 			}
-			p[i + h] = '\0';
+			p[i + h + 1] = '\0';
 		}
 		else
 		{
