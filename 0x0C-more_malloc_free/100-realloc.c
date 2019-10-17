@@ -12,7 +12,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		if (new_size == 0)
 		{
-			free(ptr);
 			return (NULL);
 		}
 
@@ -34,7 +33,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		unsigned int i = 0;
 
-		while (p[i] && i < new_size)
+		while (pt[i] && i < new_size)
 		{
 			p[i] = pt[i];
 			i++;
