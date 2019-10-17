@@ -8,7 +8,7 @@
  * Return: a pointer to the string
  */
 
-char *str_concat(char *s1, char *s2)
+char *str_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
 	int i = 0, j = 0, h = 0;
@@ -32,15 +32,18 @@ char *str_concat(char *s1, char *s2)
 		if (p)
 		{
 
-			for (h = 0; h < i; h++)
+			while (h < i && h < n)
 			{
 				p[h] = s1[h];
+				h++;
 			}
-			for (h = 0; h <= j; h++)
+			h = 0;
+			while (h <= j && (i + h) < n)
 			{
 				p[i + h] = s2[h];
+				h++;
 			}
-			p[i + j] = '\0';
+			p[i + h] = '\0';
 		}
 		else
 		{
