@@ -8,10 +8,10 @@
  * Return: a pointer to the string
  */
 
-char *str_nconcat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-	int i = 0, j = 0, h = 0;
+	unsigned int i = 0, j = 0, h = 0;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -32,13 +32,13 @@ char *str_nconcat(char *s1, char *s2, unsigned int n)
 		if (p)
 		{
 
-			while (h < i && h < n)
+			while (h < i)
 			{
 				p[h] = s1[h];
 				h++;
 			}
 			h = 0;
-			while (h <= j && (i + h) < n)
+			while (h <= j && h < n)
 			{
 				p[i + h] = s2[h];
 				h++;
