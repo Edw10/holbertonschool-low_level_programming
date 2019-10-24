@@ -4,8 +4,8 @@
 
 /**
  * main - operate two numbers
- * @argv - arguments
- * @argc - number of arguments
+ * @argv: arguments
+ * @argc: number of arguments
  * Return: always 0
  */
 
