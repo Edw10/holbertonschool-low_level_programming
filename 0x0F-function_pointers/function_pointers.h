@@ -1,5 +1,6 @@
 #ifndef EDW_10
 #define EDW_10
+#include <stdio.h>
 
 void print_name(char *name, void (*f)(char *));
 int _putchar(char c);
