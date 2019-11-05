@@ -12,7 +12,7 @@ int fibo(int n);
 
 int main(void)
 {
-	fibo(50);
+	fibo(10);
 	return (0);
 }
 
@@ -26,19 +26,23 @@ int fibo(int n)
 {
 	int f;
 
+	printf("%d", 1);
+	printf(", %d", 2);
+
 	if (n > 2)
-		f = fibo(n - 1) + fibo(n - 2);
-	if (n == 2)
 	{
-		printf(", %d", 2);
-		return (2);
+		f = fibo(n - 2) + fibo(n - 1);
+		printf(", %d", f);
+		return (f);
+
 	}
-	else
+	if (n == 1)
 	{
-		printf(", %d", 1);
 		return (1);
 	}
-	printf(", %d", f);
-	return (f);
-
+	if (n == 2)
+	{
+		return (2);
+	}
+	return(0);
 }

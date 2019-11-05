@@ -17,22 +17,23 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = n * -1;
 	}
-	if (n < 10)
+	if (n < 10 || n > -10)
 	{
 		a = n % 10;
+		if (a < 0)
+			a = a * -1;
 		_putchar('0' + a);
-
 	}
 	else
 	{
 		a = n % 10;
 		n = n / 10;
-		while (n / (j * 10) > 0)
+		while (n / (j * 10) != 0)
 		{
 			j = j * 10;
 		}
+
 		for (i = j; i > 0; i = i / 10)
 		{
 			d = n / i;
