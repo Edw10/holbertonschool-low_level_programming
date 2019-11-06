@@ -6,6 +6,7 @@
 /**
  * pop_listint - free a linked list
  * @head: pointer to the list
+ * Return: value of the head
  */
 
 int pop_listint(listint_t **head)
@@ -13,12 +14,8 @@ int pop_listint(listint_t **head)
 	listint_t *h;
 	int a;
 
-	if (!head)
-	{
-		free(head);
+	if (!(*head))
 		return (0);
-
-	}
 	h = *head;
 	a = (*head)->n;
 	*head = (*head)->next;
