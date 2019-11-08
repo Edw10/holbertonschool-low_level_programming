@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int _len(const char *b);
+long _len(const char *b);
 
 /**
  * binary_to_uint - binary to dec
@@ -14,7 +14,7 @@ int _len(const char *b);
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int n = 0;
-	int i;
+	long i;
 
 
 	for (i = _len(b); i >= 0; i--)
@@ -38,9 +38,9 @@ unsigned int binary_to_uint(const char *b)
  */
 
 
-int _len(const char *b)
+long _len(const char *b)
 {
-	unsigned int i = 0;
+	long i = 0;
 
 	while (*(b + i))
 		i++;
