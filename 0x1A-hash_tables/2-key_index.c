@@ -1,4 +1,5 @@
-#include "hash_tanles.h"
+#include "hash_tables.h"
+
 /**
  * key_index - calculate the index for the key and value
  * @key: the key
