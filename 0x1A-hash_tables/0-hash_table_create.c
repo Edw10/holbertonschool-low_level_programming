@@ -9,14 +9,15 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *new_ht;
-	hash_table_t ht;
+	hash_table_t *ht;
 
-	new_ht = &ht;
-	ht.size = size;
-	ht.array = 0;
-	ht.array = realloc(ht.array, 8 * size);
-	if (ht.array)
-		return (new_ht);
+	ht = (hash_table_t *) malloc(sizeof(hash_table_t));
+	if (!ht)
+		return (NULL);
+	(*ht).size = size;
+	(*ht).array = 0;
+	(*ht).array = realloc((*ht).array, 8 * size);
+	if ((*ht).array)
+		return (ht);
 	return (NULL);
 }
