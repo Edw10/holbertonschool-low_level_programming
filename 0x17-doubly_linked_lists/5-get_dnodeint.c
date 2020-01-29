@@ -4,9 +4,9 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - return the lenght of a double linked list
+ * get_dnodeint_at_index - return a node of double linked list
  * @head: head of the double list to print
- * @n: number
+ * @index: number
  * Return: the length of nodes
  */
 
