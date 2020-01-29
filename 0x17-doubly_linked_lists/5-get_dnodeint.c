@@ -1,0 +1,27 @@
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "lists.h"
+
+/**
+ * add_dnodeint_end - return the lenght of a double linked list
+ * @head: head of the double list to print
+ * @n: number
+ * Return: the length of nodes
+ */
+
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
+{
+	dlistint_t *aux;
+	unsigned int i = 0;
+
+	aux = head;
+	while (aux && i < index)
+	{
+		aux = aux->next;
+		i++;
+	}
+	if (i == index)
+		return (aux);
+	return NULL;
+}
