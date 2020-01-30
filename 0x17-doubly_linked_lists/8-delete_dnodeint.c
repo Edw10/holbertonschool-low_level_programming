@@ -10,18 +10,27 @@
  * Return: the length of nodes
  */
 
-int *delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *aux;
 	unsigned int i = 0;
 
+	if ((*head) == NULL)
+	{
+		return (1);
+	}
 	aux = *head;
 	if (index == 0)
 	{
+		if ((*head)->next == NULL)
+		{
+			*head = NULL;
+			return (1);
+		}
 		*head = (*head)->next;
 		(*head)->prev = NULL;
 		free(aux);
-		return 1;
+		return (1);
 	}
 	while (aux && i < index)
 	{
@@ -35,11 +44,11 @@ int *delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			aux->next->prev = aux->prev;
 			aux->prev->next = aux->next;
 			free(aux);
-			return 1;
+			return (1);
 		}
 		aux->prev->next = NULL;
 		free(aux);
-		return 1;
+		return (1);
 	}
-	return -1;
+	return (-1);
 }
