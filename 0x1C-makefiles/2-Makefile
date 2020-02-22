@@ -9,5 +9,5 @@ main:
 holberton:
 	${CC} ${SRC} -c -o holberton.h holberton.c
 
-all:
+all: main.o holberton.o
 	${CC} ${SRC} ${OBJ} -o ${NAME}
