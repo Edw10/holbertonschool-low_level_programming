@@ -3,11 +3,11 @@ SRC =
 OBJ = main.o holberton.o
 NAME = holberton
 
-main:
-	${CC} ${SRC} -c -o main.o main.c
-
-holberton:
-	${CC} ${SRC} -c -o holberton.h holberton.c
-
 all: main.o holberton.o
 	${CC} ${SRC} ${OBJ} -o ${NAME}
+
+main.o:
+	${CC} ${SRC} -c -o main.o main.c
+
+holberton.o:
+	${CC} ${SRC} -c -o holberton.o holberton.c
