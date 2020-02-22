@@ -10,4 +10,4 @@ holberton:
 	${CC} ${SRC} -c -o holberton.h holberton.c
 
 all:
-	${CC} ${SRC} ${OBJ} -c -o ${NAME}
+	${CC} ${SRC} ${OBJ} -o ${NAME}
