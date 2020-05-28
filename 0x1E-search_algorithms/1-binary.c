@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "search_algos.h"
 
-void printa(int *array, size_t i, size_t size);
-
 /**
  * binary_search - binary search
  * @array: array
@@ -12,49 +10,38 @@ void printa(int *array, size_t i, size_t size);
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t bot = 0, top = size - 1, mid = 0;
+	size_t i = 0, half = 0, l, r;
 
-	if (array == NULL || value == 0)
+	l = 0;
+	r = size - 1;
+	if (array == NULL)
 		return (-1);
 
-	printa(array, bot, size);
-	while (bot < top)
+	while  (l <= r)
 	{
-		mid = (bot + top) / 2;
-		if (array[mid] < value)
+		printf("Searching in array: ");
+		for (i = l; i <= r; i++)
 		{
-			bot = mid + 1;
-			printa(array, bot, top + 1);
-		}
-		else if (array[mid] > value)
-		{
-			top = mid - 1;
-			printa(array, bot, top + 1);
-		}
-		else
-			return (array[mid]);
-	}
-	if (array[bot] == value)
-		return (array[bot]);
-	return (-1);
-}
-
-/**
- * printa - prints array
- * @array: array
- * @i: initial point
- * @size: size
- */
-void printa(int *array, size_t i, size_t size)
-{
-	printf("Searching in array: ");
-	while (i < size)
-	{
-		if (i + 1 == size)
-			printf("%d ", array[i]);
-		else
+			if (i == r)
+			{
+				printf("%d", array[i]);
+				break;
+			}
 			printf("%d, ", array[i]);
-		i++;
+		}
+		printf("\n");
+
+		half = (l + r) / 2;
+
+		if (array[half] == value)
+			return (half);
+
+		else if (array[half] < value)
+			l = half + 1;
+
+		else if (array[half] > value)
+			r = half - 1;
 	}
-	printf("\n");
+	return (-1);
+
 }
