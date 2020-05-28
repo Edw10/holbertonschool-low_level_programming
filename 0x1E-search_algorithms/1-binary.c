@@ -32,8 +32,10 @@ int binary_search(int *array, size_t size, int value)
 			printa(array, bot, top + 1);
 		}
 		else
-			return (array[mid]);
+			return (mid);
 	}
+	if (array[bot] == value)
+		return (bot);
 	return (-1);
 }
 
