@@ -1,4 +1,5 @@
 #include "search_algos.h"
+#include <stdio.h>
 
 void printa(int *array, size_t i, size_t size);
 
